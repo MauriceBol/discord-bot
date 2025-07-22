@@ -1,3 +1,8 @@
+app.post('/webhook', (req, res) => {
+  console.log('✅ Webhook hit!');
+  res.status(200).json({ message: 'ok' });
+});
+
 require('dotenv').config();
 const express = require('express');
 const { Client, GatewayIntentBits } = require('discord.js');
